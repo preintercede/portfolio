@@ -120,17 +120,16 @@
   background: none;
 } */
 
-/* about section styling */
-
+/* all similar styling */
 section {
   padding: 100px 0;
 }
 
-.about {
+.about .services {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
-.about .title {
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -140,7 +139,7 @@ section {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -151,8 +150,7 @@ section {
   transform: translateX(-50%);
 }
 
-.about .title::after {
-  content: "";
+section .title::after {
   position: absolute;
   bottom: -7px;
   left: 50%;
@@ -163,7 +161,14 @@ section {
   transform: translateX(-50%);
 }
 
-.about .about-content {
+/* about section styling */
+
+.about .title::after {
+  content: "";
+}
+
+.about .about-content,
+.projects .projects-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -215,6 +220,60 @@ section {
 .about .about-content .right a:hover {
   color: #f2810d;
   background: none;
+}
+
+/* projects section styling */
+
+.projects {
+  color: #fff;
+  background: #111;
+}
+
+.projects .title::before {
+  background: #fff;
+}
+
+.projects .title::after {
+  background: #111;
+  content: "";
+}
+
+.projects .projects-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.projects .projects-content .card:hover {
+  background: #f2810d;
+}
+
+.projects .projects-content .card .box {
+  transition: all 0.3 ease;
+}
+
+.projects .projects-content .card:hover .box {
+  transform: scale(1.05);
+}
+
+.projects .projects-content .card i {
+  font-size: 50px;
+  color: #f2810d;
+  transition: color 0.3 ease;
+}
+
+.projects .projects-content .card:hover i {
+  background: #fff;
+}
+
+.projects .projects-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
 }
 
 /* responsive media query start  */
@@ -302,6 +361,11 @@ section {
   flex: 100%;
 }
 
+.projects .projects-content .card {
+  width: calc(50% -10px);
+  margin-bottom: 20px;
+}
+
 @media (max-width: 690px) {
   .max-width {
     padding: 0 23px;
@@ -313,6 +377,10 @@ section {
 
   .home .home-content .text-3 {
     font-size: 32px;
+  }
+
+  .projects .projects-content .card {
+    width: 100%;
   }
 }
 

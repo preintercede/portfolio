@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .max-width {
   max-width: 1300px;
   padding: 0 80px;
@@ -129,7 +133,8 @@ section {
 .services,
 .skills,
 .experience,
-.contact {
+.contact,
+footer {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
@@ -494,6 +499,23 @@ section .title::after {
 .contact .right form .button button:hover {
   color: #f2810d;
   background: none;
+}
+
+/* footer section styling */
+
+footer {
+  background: #111;
+  padding: 20px 23px;
+  color: #fff;
+}
+
+footer span a {
+  color: #f2810d;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
 }
 
 /* responsive media query start  */

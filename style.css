@@ -125,7 +125,7 @@ section {
   padding: 100px 0;
 }
 
-.about .services .skills {
+.about .services .skills .experience {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
@@ -225,16 +225,18 @@ section .title::after {
 
 /* projects section styling */
 
-.projects {
+.projects .experience {
   color: #fff;
   background: #111;
 }
 
-.projects .title::before {
+.projects .title::before,
+.experience .title::before {
   background: #fff;
 }
 
-.projects .title::after {
+.projects .title::after,
+.experience .title::after {
   background: #111;
   content: "";
 }
@@ -316,6 +318,67 @@ section .title::after {
 .skills .skills-content .right span {
   font-weight: 500;
   font-size: 18px;
+}
+
+/* experience section styling */
+
+.experience .title::after {
+  content: "";
+}
+
+.experience .carousel .card {
+  background-color: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.experience .carousel .card:hover {
+  background: #f2810d;
+}
+
+.experience .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.experience .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+
+.experience .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #f2810d !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot.active:hover {
+  background: #f2810d !important;
 }
 
 /* responsive media query start  */

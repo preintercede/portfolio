@@ -305,6 +305,11 @@ section .title::after {
   transition: color 0.3 ease;
 }
 
+.projects .projects-content .card a {
+  font-size: 20px;
+  color: #f2810d;
+}
+
 .projects .projects-content .card:hover i {
   background: #fff;
 }
@@ -363,22 +368,23 @@ section .title::after {
 }
 
 .experience .carousel .card {
-  background-color: #222;
+  background-color: #ffffff00;
+  width: 300px;
   border-radius: 6px;
-  padding: 25px 35px;
+  padding: 25px 50px;
   text-align: center;
   transition: all 0.3s ease;
 }
-
+/* 
 .experience .carousel .card:hover {
   background: #f2810d;
-}
+} */
 
 .experience .carousel .card .box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   transition: all 0.3s ease;
 }
 
@@ -389,7 +395,7 @@ section .title::after {
 .experience .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
-  margin: 10px 0 7px 0;
+  margin: 10px 20px 7px 0;
 }
 
 .owl-dots {
